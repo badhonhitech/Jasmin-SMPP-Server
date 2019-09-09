@@ -51,3 +51,6 @@ $ service apache2 restart
 ./run_cherrypy.py
 ```
 This requires that you run the collectstatic command (see above) and you should have `DEBUG=False`.
+
+## Contributes
+Inspired by [Jasmin API](https://github.com/jookies/jasmin-api)
