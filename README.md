@@ -1,5 +1,5 @@
 # Jasmin Web Panel
-Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. If you need to setup contact with **skype: helios-sw**
+Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. Need to setup contact with **skype: helios-sw**
 
 # Technology Stack
 - Ubuntu 18.04.3 LTS
@@ -7,8 +7,7 @@ Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. If you need to setup
 - LAMP (Linux, Apache, MySQL, PHP) 
 
 ## Installation
-Download and Extract folder
-I recommend installing in a virtualenv
+Complete Things To Do After Install Ubuntu. Download and Extract folder. I recommend installing in a virtualenv!
 
 Install dependencies:
 
@@ -39,7 +38,15 @@ sudo python manage.py runserver [::]:8000
 ```
 This is slower, requires `DEBUG=True`, and is much less secure
 
+## Deployment
 To run on production:
+```shell
+$ sudo apt-get install apache2 libapache2-mod-wsgi
+$ cp 000-default.conf /etc/apache2/sites-available/000-default.conf
+$ sudo a2enmod wsgi
+$ a2ensite 000-default.conf
+$ service apache2 restart
+
 ```shell
 ./run_cherrypy.py
 ```
