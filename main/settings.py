@@ -52,18 +52,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'main.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    # // for mysql connections.
-    # 'default': {
-    #     "NAME": "jasmin-smpp",
-    #     "HOST": "127.0.0.1",
-    #     "ENGINE": "django.db.backends.mysql",
-    #     "USER": "root",
-    #     "PASSWORD": "JasminSMS",
-    # }
+     'default': {
+         "NAME": "jasmin",
+         "HOST": "127.0.0.1",
+         "ENGINE": "django.db.backends.mysql",
+         "USER": "ujasmin",
+         "PASSWORD": "Pe@tio2019",
+     },
 }
 
 AUTH_PASSWORD_VALIDATORS = [
