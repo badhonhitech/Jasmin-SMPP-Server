@@ -1,4 +1,4 @@
-# Jasmin Web Panel
+# Jasmin SMPP Panel (Server)
 Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. Need to setup contact with **skype: helios-sw**
 
 # Technology Stack
