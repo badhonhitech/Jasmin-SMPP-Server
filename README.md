@@ -29,6 +29,7 @@ TELNET_PW = 'jclipwd'
 To run for testing and development: 
 ```shell
 ./manage.py runserver
+sudo python manage.py runserver [::]:8000
 ```
 This is slower, requires `DEBUG=True`, and is much less secure
 
