@@ -1,5 +1,5 @@
 # Jasmin Web Panel
-Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. If you need to setup contact with skype: helios-sw
+Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. If you need to setup contact with **skype: helios-sw**
 
 ## Installation
 Download and Extract folder
