@@ -1,6 +1,11 @@
 # Jasmin Web Panel
 Jasmin SMPP Panel With MySQL Enable for Jasmin SMS Gateway. If you need to setup contact with **skype: helios-sw**
 
+# Technology Stack
+- Ubuntu 18.04.3 LTS
+- Django
+- LAMP (Linux, Apache, MySQL, PHP) 
+
 ## Installation
 Download and Extract folder
 I recommend installing in a virtualenv
