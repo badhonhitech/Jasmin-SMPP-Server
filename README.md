@@ -53,4 +53,4 @@ $ service apache2 restart
 This requires that you run the collectstatic command (see above) and you should have `DEBUG=False`.
 
 ## Contributes
-Inspired by [Jasmin API](https://github.com/jookies/jasmin-api)
+https://github.com/amechax/JasminWebPanel
