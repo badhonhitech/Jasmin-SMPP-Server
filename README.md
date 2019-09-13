@@ -92,4 +92,3 @@ sudo service apache2 reload
 ## visit
 http://72.255.34.254:8001
 
-## Rebuild By: Skype: helios-sw
