@@ -26,17 +26,21 @@ sudo apt update
 sudo apt install git
 sudo git config --global user.name "YourName"
 sudo git config --global user.email youremail@gmail.com
+wget -qO - http://bit.ly/jasmin-deb-repo | sudo bash
+sudo apt-get install python-jasmin
+sudo systemctl enable jasmind
+sudo systemctl start jasmind
+
 sudo apt list --upgradable
 sudo apt upgrade -y
 sudo apt -y autoclean 
 sudo apt -y clean 
 sudo apt update
 sudo reboot
-```
+
 
 ***2nd Phase***
 Install Apache+clone repository to /var/www/:
-```shell
 
 sudo apt update
 sudo apt-get install apache2 libapache2-mod-wsgi
@@ -45,36 +49,38 @@ sudo systemctl enable apache2
 sudo systemctl restart apache2
 sudo systemctl reload apache2
 cd /var/www/
-git clone https://github.com/itelservices/JasminSMPPPanel.git
+sudo git clone https://github.com/amechax/JasminWebPanel.git
 sudo rm -rf html
-sudo mv JasminSMPPPanel html
+sudo mv JasminWebPanel html
 cd html
 sudo apt install python-pip
 sudo pip install -r requirements.pip
 sudo ./manage.py migrate 
 sudo ./manage.py createsuperuser 
 sudo ./manage.py collectstatic
-```
+
 If you are running the production server (see below) rather than the Django dev server. It should be run again on any upgrade that changes static files. If in doubt, run it.
 
 You can also override the default settings for the telnet connection in local_settings.py. These settings with their defaults are:
 
-```python
+
 TELNET_HOST = '127.0.0.1'
 TELNET_PORT = 8990
 TELNET_USERNAME = 'root'
 TELNET_PW = 'password'
-```
+
 ## Running
 
 To run for testing and development: 
-```shell
-sudo python manage.py runserver [::]:8000
-```
 
+sudo python manage.py runserver [::]:8000
+
+
+
+***3rd Phase***
 ## Deployment
 To run on production:
-```shell
+
 cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 sudo a2enmod wsgi
 sudo a2ensite 000-default.conf
@@ -87,7 +93,7 @@ sudo chown www-data:www-data html
 cd html
 sudo chown www-data:www-data db.sqlite3 
 sudo service apache2 reload
-```
+
 
 ## visit
 http://localhost/
