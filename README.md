@@ -65,12 +65,12 @@ If you are running the production server (see below) rather than the Django dev 
 
 You can also override the default settings for the telnet connection in local_settings.py. These settings with their defaults are:
 
-
+```shell
 TELNET_HOST = '127.0.0.1'
 TELNET_PORT = 8990
 TELNET_USERNAME = 'root'
 TELNET_PW = 'password'
-
+```
 ## Running
 
 To run for testing and development: 
