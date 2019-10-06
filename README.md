@@ -82,7 +82,7 @@ sudo python manage.py runserver [::]:8000
 ***3rd Phase*** To run on production:
 ```shell
 
-cp 000-default.conf /etc/apache2/sites-available/000-default.conf
+sudo cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 sudo a2enmod wsgi
 sudo a2ensite 000-default.conf
 sudo service apache2 restart
