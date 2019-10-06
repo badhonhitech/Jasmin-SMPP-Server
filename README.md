@@ -42,6 +42,7 @@ sudo reboot
 ***2nd Phase***
 Install Apache+clone repository to /var/www/:
 
+```shell
 sudo apt update
 sudo apt-get install apache2 libapache2-mod-wsgi
 sudo ufw allow 'Apache'
@@ -58,6 +59,7 @@ sudo pip install -r requirements.pip
 sudo ./manage.py migrate 
 sudo ./manage.py createsuperuser 
 sudo ./manage.py collectstatic
+```
 
 If you are running the production server (see below) rather than the Django dev server. It should be run again on any upgrade that changes static files. If in doubt, run it.
 
