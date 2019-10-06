@@ -37,7 +37,7 @@ sudo apt -y autoclean
 sudo apt -y clean 
 sudo apt update
 sudo reboot
-
+```
 
 ***2nd Phase***
 Install Apache+clone repository to /var/www/:
