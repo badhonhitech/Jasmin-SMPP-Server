@@ -79,9 +79,8 @@ sudo python manage.py runserver [::]:8000
 
 
 
-***3rd Phase***
-## Deployment
-To run on production:
+***3rd Phase*** To run on production:
+```shell
 
 cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 sudo a2enmod wsgi
@@ -95,7 +94,7 @@ sudo chown www-data:www-data html
 cd html
 sudo chown www-data:www-data db.sqlite3 
 sudo service apache2 reload
-
+```
 
 ## visit
 http://localhost/
