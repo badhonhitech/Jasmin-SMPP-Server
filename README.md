@@ -60,42 +60,6 @@ sudo ./manage.py migrate
 sudo ./manage.py createsuperuser 
 sudo ./manage.py collectstatic
 ```
-
-If you are running the production server (see below) rather than the Django dev server. It should be run again on any upgrade that changes static files. If in doubt, run it.
-
-You can also override the default settings for the telnet connection in local_settings.py. These settings with their defaults are:
-
-```shell
-TELNET_HOST = '127.0.0.1'
-TELNET_PORT = 8990
-TELNET_USERNAME = 'root'
-TELNET_PW = 'password'
-```
 ## Running
-
-To run for testing and development: 
-
-sudo python manage.py runserver [::]:8000
-
-
-
-***3rd Phase*** To run on production:
-```shell
-
-sudo cp 000-default.conf /etc/apache2/sites-available/000-default.conf
-sudo a2enmod wsgi
-sudo a2ensite 000-default.conf
-sudo service apache2 restart
-sudo chmod a+w db.sqlite3
-cd ..
-sudo chown root:root html
-sudo service apache2 restart
-sudo chown www-data:www-data html
-cd html
-sudo chown www-data:www-data db.sqlite3 
-sudo service apache2 reload
-```
-
-## visit
 http://localhost/
 
