@@ -1,5 +1,5 @@
 # Jasmin SMPP Panel (Server)
-Jasmin SMPP Panel for Jasmin SMS Gateway. Need to setup contact with **skype: helios-sw**
+Jasmin SMPP Panel for Jasmin SMS Gateway. Need to setup contact with **skype: live:badhonhitech**
 
 # Technology Stack
 - Ubuntu 18.04.3 LTS
